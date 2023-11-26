@@ -1,0 +1,47 @@
+.projects-button{
+
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  margin-right: 10px;
+  border-style: solid;
+  border-color: #cac5c5;
+  border-radius: 5px;
+  border-width: 1px;
+}
+.dif-button{
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  border-width: 1px;
+  background-color: #FD6F00;
+  color: white;
+}
+
+.page-documents{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 2rem;
+}
+.Rectangle{
+  height: 20rem;
+}
+
+
+.document-position{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.doc1 ,
+.doc1-1{
+  position: absolute;
+}
+.doc1{
+}
+.doc1-1{
+  top: 7rem;
+ right: -10rem;
+}
+.document-1{
+  background-color: rgb(128, 66, 0);
+}

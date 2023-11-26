@@ -1,0 +1,31 @@
+.about-me-view{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  font-family: Montserrat;
+  margin-bottom: 5rem;
+}
+.about-me-left{
+  width: 40%;
+}
+.about-me-right{
+  width: 60%;
+}
+h1{
+  font-size: 55px;
+}
+p{
+  font-weight: 400;
+}
+/* Mobile CSS */
+@media (max-width: 768px){
+  .about-me-view{
+    flex-direction: column;
+  }
+  .about-me-left{
+    width: 100%;
+  }
+  .about-me-right{
+    width: 100%;
+  }
+}
