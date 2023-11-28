@@ -29,7 +29,7 @@
 
 }
 .experienc{
-  width: 85%;
+ 
   font-weight: 400;
  
 }
@@ -65,5 +65,21 @@
 
 .main-2,
 .experienc{
-margin-bottom: 5rem;
+  margin-bottom: 2rem;
+}
+ 
+
+@media (max-width: 768px) {
+ .header-view{
+  flex-direction: column;
+ }
+ .header-left{
+  width: 100%;
+ }
+ .header-right{
+  width: 100%;
+  align-items: center;
+ }
+
+  
 }

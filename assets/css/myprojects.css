@@ -19,29 +19,27 @@
 
 .page-documents{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 2rem;
+  grid-template-columns: 1fr 1fr 1fr ;
+  column-gap: 5rem;
+  margin-top: 3rem;
+  flex-direction: column;
 }
 .Rectangle{
   height: 20rem;
 }
 
 
-.document-position{
-  position: relative;
-  display: flex;
-  align-items: center;
+.title,
+.pharagraph{
+  margin: 0px;
 }
-.doc1 ,
-.doc1-1{
-  position: absolute;
-}
-.doc1{
-}
-.doc1-1{
-  top: 7rem;
- right: -10rem;
-}
-.document-1{
-  background-color: rgb(128, 66, 0);
-}
+ .title{
+  font-size: 15px;
+  color: #FD6F00;
+  
+ }
+
+
+
+
+
