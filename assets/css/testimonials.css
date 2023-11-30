@@ -1,0 +1,60 @@
+.frame{
+display: flex;
+background-color:#F8F8F8;
+padding: 3rem;
+border-radius: 1rem;
+overflow: hidden;
+margin-top: 3rem;
+
+}
+
+
+.testimonials-right{
+width: 80%;
+ margin-left: 3rem;
+ margin-top:1.5rem;
+
+}
+.ps-name{
+ font-size: 20px;
+ font-weight: bold;
+ margin: 0;
+
+}
+.ps-job{
+  font-size: 15px;
+  margin-top: 4px;
+}
+.pharagraph-test{
+  color: #FD6F00;
+}
+
+
+@media (max-width:768px) {
+.frame{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  justify-items: center;
+  
+}
+.testimonials-right{
+ text-align: center;
+align-items: center;
+}
+.testimonials-left{
+ margin-left: 2.5rem;
+}
+
+}
+.small-button{
+  border: none;
+  height: 0.5rem;
+  width: 3rem;
+  border-radius:5rem ;
+  margin-left: 1rem;
+}
+
+.thediffrent-button{
+  background-color: #FD6F00;
+}

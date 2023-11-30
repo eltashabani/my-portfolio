@@ -18,27 +18,44 @@
 }
 
 .page-documents{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr ;
+  display: flex;
+  flex-direction: row;
   column-gap: 5rem;
   margin-top: 3rem;
-  flex-direction: column;
+  
 }
 .Rectangle{
   height: 20rem;
 }
-
-
-.title,
-.pharagraph{
-  margin: 0px;
+.font-text{
+  font-weight: bold;
 }
- .title{
+
+.title-1,
+.pharagraph{
+  margin: 0;
+ 
+}
+ .title-1{
   font-size: 15px;
   color: #FD6F00;
-  
+  line-height: 3rem;
+  font-weight: bold;
  }
 
+ @media (max-width:768px) {
+  .page-documents{
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+  }
+ .interduction{
+  margin-bottom: 3rem;
+ }
+  .Rectangle{
+    margin-left: 2rem;
+  }
+ }
 
 
 

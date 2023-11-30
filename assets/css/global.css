@@ -1,9 +1,10 @@
 body{
   overflow-x: hidden;
-  padding-bottom: 1000px;
+ 
 }
-.title{
-  line-height: 55px;
+.title-2{
+  font-size: 55px;
+  margin-bottom:1rem;
 }
 
 .mt-0{
@@ -64,6 +65,7 @@ body{
   padding:6px 12px 6px 12px ;
   color: white;
   width: 130px;
+  font-family: Montserrat;
  }
  .profile-image{
   width: 90%;
@@ -76,5 +78,13 @@ body{
   width: 100%;
  
 }
-
+.button-c{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top:5rem ;
+}
+section{
+  margin-bottom: 10rem;
+}
  

@@ -1,0 +1,29 @@
+.input{
+  width: 35%;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #AFAFAF;
+  margin-right: 1.5rem;
+  background-color: #F8F8F8;
+  outline: none;
+  font-size: 15px;
+  padding-left: 1rem;
+  font-family: Montserrat ;
+}
+.button-contact{
+  border-radius: 10px;
+  align-items: flex-start;
+  font-family: Montserrat ;
+  font-weight: bold;
+}
+.button-class{
+  font-family: Montserrat ;
+}
+@media (max-width:768px){
+ .input{
+  width: 80%;
+ }
+ 
+}
+
