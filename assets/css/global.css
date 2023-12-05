@@ -30,19 +30,21 @@ body{
   padding-left: 15px;
   padding-right: 15px;
   max-width: 100%;
- margin-bottom: 5rem;
+ 
 }
 
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
   }
+  
 }
 
 @media (min-width: 768px) {
   .container {
     max-width: 720px;
   }
+ 
 }
 
 @media (min-width: 992px) {
@@ -68,7 +70,7 @@ body{
   font-family: Montserrat;
  }
  .profile-image{
-  width: 90%;
+  width: 100%;
 }
 .container-smaller{
   display: flex;
@@ -84,7 +86,14 @@ body{
   justify-content: center;
   margin-top:5rem ;
 }
-section{
-  margin-bottom: 10rem;
+.navbar,
+.header,
+.about-me,
+.services,
+.my-projects,
+.testimonials{
+  margin-bottom: 7rem;
 }
+
+
  

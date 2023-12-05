@@ -30,10 +30,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
+ 
 }
 .theend{
-  color: #FD6F00;
+  color: #f8f6f5;
+  font-family: Montserrat;
 }
 @media (max-width: 768px){
   .footer{
@@ -47,4 +48,6 @@
   .footer-bottom{
     margin-top: -2rem;
   }
-}
+
+  }
+  

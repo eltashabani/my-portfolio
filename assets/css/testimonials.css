@@ -1,17 +1,18 @@
 .frame{
 display: flex;
 background-color:#F8F8F8;
-padding: 3rem;
+padding: 1.5rem;
 border-radius: 1rem;
 overflow: hidden;
 margin-top: 3rem;
+align-items: center;
 
 }
 
 
 .testimonials-right{
 width: 80%;
- margin-left: 3rem;
+ margin: 3rem;
  margin-top:1.5rem;
 
 }
@@ -41,9 +42,11 @@ width: 80%;
 .testimonials-right{
  text-align: center;
 align-items: center;
+justify-content: center;
+margin: 0;
 }
 .testimonials-left{
- margin-left: 2.5rem;
+ 
 }
 
 }
@@ -57,4 +60,8 @@ align-items: center;
 
 .thediffrent-button{
   background-color: #FD6F00;
+}
+.testimonials-left{
+  display: flex;
+  justify-content: center;
 }

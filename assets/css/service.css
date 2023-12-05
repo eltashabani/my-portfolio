@@ -10,7 +10,7 @@
   background-color:#F8F8F8;
   border-radius: 1rem;
  align-items: center;
- padding: 2rem 0rem 2rem 1rem;
+ padding: 1rem 1rem 1rem 1rem;
 
 }
 .box-images{
@@ -48,4 +48,11 @@
   margin-bottom: 3rem;
  }
 
+}
+@media (max-width:992px) {
+  .box-design{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
 }
