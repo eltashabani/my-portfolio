@@ -4,7 +4,7 @@ background-color:#F8F8F8;
 padding: 1.5rem;
 border-radius: 1rem;
 overflow: hidden;
-margin-top: 3rem;
+margin-top: 1rem;
 align-items: center;
 
 }
@@ -45,9 +45,7 @@ align-items: center;
 justify-content: center;
 margin: 0;
 }
-.testimonials-left{
- 
-}
+
 
 }
 .small-button{

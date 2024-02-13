@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="assets/css/myprojects.css">
     <link rel="stylesheet" href="assets/css/testimonials.css">
     <link rel="stylesheet" href="assets/css/design-together.css">
+    <link rel="stylesheet" href="assets/script.js">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
@@ -23,7 +24,7 @@
   </head>
   <body>
 
-    <section class="navbar">
+    <section id="home" class="navbar">
       <div class="container">
         <div class="navbar-view">
           <div class="navbar-left">
@@ -36,26 +37,37 @@
           </div>
           <div class="navbar-right">
             <div class="middle">
-             <div class="font-one">Home</div>
-             <div class="font-one">About me </div>
-             <div class="font-one">Services</div>
-             <div class="font-one">Projects</div>
-             <div class="font-one">Testimonials</div>
-             <div class="font-one">Contact</div>
+              <div onclick="scrollToSection('home')" class="font-one">Home</div>
+              <div onclick="scrollToSection('about')" class="font-one ">About me </div>
+              <div onclick="scrollToSection('services')" class="font-one ">Services</div>
+              <div onclick="scrollToSection('projects')" class="font-one ">Projects</div>
+              <div onclick="scrollToSection('testimonials')" class="font-one ">Testimonials</div>
+              <div onclick="scrollToSection('contact')" class="font-one ">Contact</div>
             </div>
             <div class="button">
               <button class="button-operational">Download CV</button>
+              <button class="button-operational button-2c">Menu Bar</button>
             </div>
-            <div class="hamburger-icon">
-              <img class="hamburger" src="/assets/images/hamburger-button-computer-icons-menu-clip-art-menu.jpeg">
-            </div>
+            <div class="hamburger-icon" id="hamburger-icon" onclick="onClickMenu()">
+              <img class="hamburger" src="./assets/images/hamburger-svgrepo-com.svg">
+            </div>   
+            
           </div>
         </div>
       </div>
     </section>
 
+    <section id="mobile-menu">
+        <ul class="container mobile-menu-list">
+          <li><a href="#home" onclick="scrollToSection('home')" class="menu-hover-list" >Home</a></li>
+          <li><a href="#about" onclick="scrollToSection('about')" class="menu-hover-list">About</a></li>
+          <li><a href="#services" onclick="scrollToSection('services')" class="menu-hover-list">Services</a></li>
+          <li><a href="#contact" onclick="scrollToSection('contact')" class="menu-hover-list">Contact</a></li>
+        </ul>
+    </section>
 
-     <section class="header">
+
+     <section  class="header">
       <div class="container">
         <div class="header-view">
           <div class="header-left">
@@ -63,14 +75,14 @@
               <div class="starter"> Hi I am </div>
               <div class="header-name"> Elta Shabani </div>
               <div class="main-heading">
-                <div>UI & UX </div> 
-                <div class="main-2"> Designer</div>
+                <div>Software</div> 
+                <div class="main-2"> Engineer </div>
                  </div>
                  <div class="experienc">
                   Used a range of languages, operating systems and development tools as well as experiencing the system development life cycle. I am keen to develop as a graduate trainee in software development.
                  </div>
                <div>
-              <button class="button-operational">Hire me </button>
+              <button onclick="scrollToSection('contact')" class="button-operational">Hire me </button>
              </div>
           </div>
           </div>
@@ -79,69 +91,70 @@
             <img class="profile-image" src="assets/images/img-2.svg">
           </div>
            <div class="symbols">
-            <svg xmlns="http://www.w3.org/2000/svg" height="36" width="31" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M194.4 211.7a53.3 53.3 0 1 0 59.3 88.7 53.3 53.3 0 1 0 -59.3-88.7zm142.3-68.4c-5.2-5.2-11.5-9.3-18.4-12c-18.1-7.1-57.6-6.8-83.1-6.5c-4.1 0-7.9 .1-11.2 .1c-3.3 0-7.2 0-11.4-.1c-25.5-.3-64.8-.7-82.9 6.5c-6.9 2.7-13.1 6.8-18.4 12s-9.3 11.5-12 18.4c-7.1 18.1-6.7 57.7-6.5 83.2c0 4.1 .1 7.9 .1 11.1s0 7-.1 11.1c-.2 25.5-.6 65.1 6.5 83.2c2.7 6.9 6.8 13.1 12 18.4s11.5 9.3 18.4 12c18.1 7.1 57.6 6.8 83.1 6.5c4.1 0 7.9-.1 11.2-.1c3.3 0 7.2 0 11.4 .1c25.5 .3 64.8 .7 82.9-6.5c6.9-2.7 13.1-6.8 18.4-12s9.3-11.5 12-18.4c7.2-18 6.8-57.4 6.5-83c0-4.2-.1-8.1-.1-11.4s0-7.1 .1-11.4c.3-25.5 .7-64.9-6.5-83l0 0c-2.7-6.9-6.8-13.1-12-18.4zm-67.1 44.5A82 82 0 1 1 178.4 324.2a82 82 0 1 1 91.1-136.4zm29.2-1.3c-3.1-2.1-5.6-5.1-7.1-8.6s-1.8-7.3-1.1-11.1s2.6-7.1 5.2-9.8s6.1-4.5 9.8-5.2s7.6-.4 11.1 1.1s6.5 3.9 8.6 7s3.2 6.8 3.2 10.6c0 2.5-.5 5-1.4 7.3s-2.4 4.4-4.1 6.2s-3.9 3.2-6.2 4.2s-4.8 1.5-7.3 1.5l0 0c-3.8 0-7.5-1.1-10.6-3.2zM448 96c0-35.3-28.7-64-64-64H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96zM357 389c-18.7 18.7-41.4 24.6-67 25.9c-26.4 1.5-105.6 1.5-132 0c-25.6-1.3-48.3-7.2-67-25.9s-24.6-41.4-25.8-67c-1.5-26.4-1.5-105.6 0-132c1.3-25.6 7.1-48.3 25.8-67s41.5-24.6 67-25.8c26.4-1.5 105.6-1.5 132 0c25.6 1.3 48.3 7.1 67 25.8s24.6 41.4 25.8 67c1.5 26.3 1.5 105.4 0 131.9c-1.3 25.6-7.1 48.3-25.8 67z"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" height="36" width="31" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+            <svg id="instagramIcon" class="insta" xmlns="http://www.w3.org/2000/svg" height="36" width="31" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M194.4 211.7a53.3 53.3 0 1 0 59.3 88.7 53.3 53.3 0 1 0 -59.3-88.7zm142.3-68.4c-5.2-5.2-11.5-9.3-18.4-12c-18.1-7.1-57.6-6.8-83.1-6.5c-4.1 0-7.9 .1-11.2 .1c-3.3 0-7.2 0-11.4-.1c-25.5-.3-64.8-.7-82.9 6.5c-6.9 2.7-13.1 6.8-18.4 12s-9.3 11.5-12 18.4c-7.1 18.1-6.7 57.7-6.5 83.2c0 4.1 .1 7.9 .1 11.1s0 7-.1 11.1c-.2 25.5-.6 65.1 6.5 83.2c2.7 6.9 6.8 13.1 12 18.4s11.5 9.3 18.4 12c18.1 7.1 57.6 6.8 83.1 6.5c4.1 0 7.9-.1 11.2-.1c3.3 0 7.2 0 11.4 .1c25.5 .3 64.8 .7 82.9-6.5c6.9-2.7 13.1-6.8 18.4-12s9.3-11.5 12-18.4c7.2-18 6.8-57.4 6.5-83c0-4.2-.1-8.1-.1-11.4s0-7.1 .1-11.4c.3-25.5 .7-64.9-6.5-83l0 0c-2.7-6.9-6.8-13.1-12-18.4zm-67.1 44.5A82 82 0 1 1 178.4 324.2a82 82 0 1 1 91.1-136.4zm29.2-1.3c-3.1-2.1-5.6-5.1-7.1-8.6s-1.8-7.3-1.1-11.1s2.6-7.1 5.2-9.8s6.1-4.5 9.8-5.2s7.6-.4 11.1 1.1s6.5 3.9 8.6 7s3.2 6.8 3.2 10.6c0 2.5-.5 5-1.4 7.3s-2.4 4.4-4.1 6.2s-3.9 3.2-6.2 4.2s-4.8 1.5-7.3 1.5l0 0c-3.8 0-7.5-1.1-10.6-3.2zM448 96c0-35.3-28.7-64-64-64H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96zM357 389c-18.7 18.7-41.4 24.6-67 25.9c-26.4 1.5-105.6 1.5-132 0c-25.6-1.3-48.3-7.2-67-25.9s-24.6-41.4-25.8-67c-1.5-26.4-1.5-105.6 0-132c1.3-25.6 7.1-48.3 25.8-67s41.5-24.6 67-25.8c26.4-1.5 105.6-1.5 132 0c25.6 1.3 48.3 7.1 67 25.8s24.6 41.4 25.8 67c1.5 26.3 1.5 105.4 0 131.9c-1.3 25.6-7.1 48.3-25.8 67z"/></svg>
+            <svg id="linkedinIcon" class="linked"  xmlns="http://www.w3.org/2000/svg" height="36" width="31" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
            </div>
          </div>
         </div>
       </div>
     </section>
 
-    <section class="about-me">
+    <section id="about" class="about-me">
       <div class="container">
         <div class="about-me-view">
           <div class="about-me-left">
             <img class="profile-image" src="assets/images/Group 7.svg">
           </div>
           <div class="about-me-right">
-           <h1 class="title-2">About Me</h1>
-           <p class="text-1">Used a range of languages, operating systems and development tools as well as experiencing the system development life cycle. I am keen to develop as a graduate trainee in software development.</p>
+           <h1 class="title">About Me</h1>
+           <p class="text-1">
+            "Greetings! I'm Elta, a budding developer committed to the art of coding. My journey began with a single project, sparking my passion for turning concepts into functional code. As a newcomer, I am focused on refining my skills and embracing the challenges that come with each new project. Eager to immerse myself in diverse opportunities, I look forward to the journey of growth and collaboration that lies ahead in the expansive realm of development."</p>
           </div>
         </div>
       </div>
     </section> 
 
-    <section class="services">
+    <section id="services" class="services">
       <div class="container font-one">
           <div class="container-smaller ">
-           <h1 class="title-2">Services</h1>
-           <p class="services-explained text-center mt-0">The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser</p>  
+           <h1 class="title">Services</h1>
+           <p class="text-center mt-0">Currently have worked with HTML,CSS,JavaScript. Eager to work with lots of other languages.</p>  
           </div>
 
           <div class="box-design">
            <div class="backround-color-box">
-            <img class="box-images"  src="assets/images/symbol1.svg">
-            <div class="lineheight-div">UI/UX</div>
-            <div>Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam interdum</div>
+            <img class="box-images"  src="assets/images/logo-html5 (1).svg">
+            <div class="lineheight-div night-color">HTML</div>
+            <div class="night-color">Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam interdum</div>
            </div>
 
            <div class="backround-color-box">
-            <img class="box-images" src="assets/images/symbol2.svg">
-            <div class="lineheight-div">Web design</div>
-            <div>Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam interdum</div>
+            <img class="box-images" src="assets/images/logo-css3.svg">
+            <div class="lineheight-div night-color">CSS</div>
+            <div class="night-color">Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam interdum</div>
            </div>
         
           
            <div class="backround-color-box">
-            <img class="box-images" src="assets/images/symbol3.svg">
-            <div class="lineheight-div">App design</div>
-            <div>Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam interdum</div>
+            <img class="box-images" src="assets/images/logo-javascript.svg">
+            <div class="lineheight-div night-color">JavaScript</div>
+            <div class="night-color">Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam interdum</div>
            </div>
 
-           <div class="backround-color-box">
+           <!--div class="backround-color-box">
               <img class="box-images" src="assets/images/symbol4.svg">
               <div class="lineheight-div">Graphic design</div>
-              <div>Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam interdum</div>
+              <div>Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam interdum</div-->
              </div>
           </div>
       </div>
     </section>
 
-    <section class="my-projects">
+    <section id="projects" class="my-projects">
       <div class="container">
         <div class="container-smaller">
-         <h1 class="title-2">My projects</h1>
-         <p class="text-center">Lorem ipsum dolor sit amet consectetur. Mollis erat duis aliquam mauris est risus lectus. Phasellus consequat urna tellus</p>
+         <h1 class="title">My projects</h1>
+         <p class="text-center">Currently I have fineshed one project.This project is just the beginning for me, and I'm eager to take on more challenges as time progresses. </p>
         <div class="button-class">
           <button class="projects-button font-one">All</button>
           <button class="dif-button font-one">Web design</button>
@@ -168,66 +181,62 @@
     </section>
 
 
-    <section class="testimonials">
+    <section id="testimonials" class="testimonials">
       <div class="container">
         <div class="container-smaller">
-         <h1 class="title-2">Testimonials</h1>
-         <p class="p-class"> Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium  </p>
+         <h1 class="title">Testimonials</h1>
+         
         </div>
         <div class="frame font-one">
            <div class="testimonials-left">
              <img class="img-ellipse" src="assets/images/Ellipse 10.svg">
            </div>
           <div class="testimonials-right">
-             <p class="pharagraph-test"> &ldquo; Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices &rdquo; </p>
-             <h1 class="ps-name">Elta</h1>
-             <h2 class="ps-job">Web developer</h2>
+             <p class="pharagraph-test"> &ldquo;"Hi there! I'm Elta, an aspiring developer with a strong enthusiasm for coding. I bring a dedication to learning, adaptability, and a keen problem-solving mindset to the tech landscape. Crafting clean, efficient code is my forte, and I look forward to contributing to exciting projects in the world of development. Let's build something awesome together!"&rdquo; </p>
+             <h1 class="ps-name night-color">Elta</h1>
+             <h2 class="ps-job night-color">Web developer</h2>
           </div>
         </div>
-        <div class="button-c">
-          <button class="small-button"></button>   
-          <button class="thediffrent-button small-button"></button>   
-          <button class="small-button"></button>   
-          <button class="small-button"></button> 
-        </div>
+       
       </div>
     </section>
 
-    <section class="design-together">
+    <section id="contact" class="design-together">
       <div class="container">
         <div class="container-smaller">
-          <h1 class="title-2">Lets Design Together</h1>
-          <p>Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in. Aliquet donec morbi convallis pretium</p>
+          <h1 class="title">Lets Design Together</h1>
+          <p class="text-center">If you'd like to reach out,simply share your email below , and I'll be sure to reach out promptly. </p>
         </div>
         <div class="button-c">
           
-            <input type="text" class="input" placeholder="Enter Your Email">
+            <input type="email" id="userEmail" class="input" placeholder="Enter Your Email">
           
-          <button class="button-contact button-operational">Contact Me</button>
+          <!--a href="mailto:elta.shabani@gmail.com" class="dif-button" >Contact Me</a-->
+          <a href="#" id="contactLink" class="dif-button button-contact button-class" onclick="sendEmail()">Contact Me</a>
         </div>
       </div>
     </section>
 
-    <section class="design-together footer-class">
+    <section  class="design-together footer-class">
       <div class="footer">
         <div class="footer-top">
-          <div class="name font-one footer-presantation">
+          <div class="name font-one footer-presantation night-color">
             <div class="name1">E</div>
             <div class="surname">Shabani</div>
           </div>
           <div></div>
         
-        <div class="collectively ">
-          <div class="font-one">Home</div>
-          <div class="font-one ">About me </div>
-          <div class="font-one ">Services</div>
-          <div class="font-one ">Projects</div>
-          <div class="font-one ">Testimonials</div>
-          <div class="font-one ">Contact</div>
+        <div class="collectively night-color">
+          <div onclick="scrollToSection('home')" class="font-one">Home</div>
+          <div onclick="scrollToSection('about')" class="font-one ">About me </div>
+          <div onclick="scrollToSection('services')" class="font-one ">Services</div>
+          <div onclick="scrollToSection('projects')" class="font-one ">Projects</div>
+          <div onclick="scrollToSection('testimonials')" class="font-one ">Testimonials</div>
+          <div onclick="scrollToSection('contact')" class="font-one ">Contact</div>
           </div>
         <div class="icons">
-        <svg xmlns="http://www.w3.org/2000/svg" height="36" width="31" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M194.4 211.7a53.3 53.3 0 1 0 59.3 88.7 53.3 53.3 0 1 0 -59.3-88.7zm142.3-68.4c-5.2-5.2-11.5-9.3-18.4-12c-18.1-7.1-57.6-6.8-83.1-6.5c-4.1 0-7.9 .1-11.2 .1c-3.3 0-7.2 0-11.4-.1c-25.5-.3-64.8-.7-82.9 6.5c-6.9 2.7-13.1 6.8-18.4 12s-9.3 11.5-12 18.4c-7.1 18.1-6.7 57.7-6.5 83.2c0 4.1 .1 7.9 .1 11.1s0 7-.1 11.1c-.2 25.5-.6 65.1 6.5 83.2c2.7 6.9 6.8 13.1 12 18.4s11.5 9.3 18.4 12c18.1 7.1 57.6 6.8 83.1 6.5c4.1 0 7.9-.1 11.2-.1c3.3 0 7.2 0 11.4 .1c25.5 .3 64.8 .7 82.9-6.5c6.9-2.7 13.1-6.8 18.4-12s9.3-11.5 12-18.4c7.2-18 6.8-57.4 6.5-83c0-4.2-.1-8.1-.1-11.4s0-7.1 .1-11.4c.3-25.5 .7-64.9-6.5-83l0 0c-2.7-6.9-6.8-13.1-12-18.4zm-67.1 44.5A82 82 0 1 1 178.4 324.2a82 82 0 1 1 91.1-136.4zm29.2-1.3c-3.1-2.1-5.6-5.1-7.1-8.6s-1.8-7.3-1.1-11.1s2.6-7.1 5.2-9.8s6.1-4.5 9.8-5.2s7.6-.4 11.1 1.1s6.5 3.9 8.6 7s3.2 6.8 3.2 10.6c0 2.5-.5 5-1.4 7.3s-2.4 4.4-4.1 6.2s-3.9 3.2-6.2 4.2s-4.8 1.5-7.3 1.5l0 0c-3.8 0-7.5-1.1-10.6-3.2zM448 96c0-35.3-28.7-64-64-64H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96zM357 389c-18.7 18.7-41.4 24.6-67 25.9c-26.4 1.5-105.6 1.5-132 0c-25.6-1.3-48.3-7.2-67-25.9s-24.6-41.4-25.8-67c-1.5-26.4-1.5-105.6 0-132c1.3-25.6 7.1-48.3 25.8-67s41.5-24.6 67-25.8c26.4-1.5 105.6-1.5 132 0c25.6 1.3 48.3 7.1 67 25.8s24.6 41.4 25.8 67c1.5 26.3 1.5 105.4 0 131.9c-1.3 25.6-7.1 48.3-25.8 67z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" height="36" width="31" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+        <svg id="instagramIcons" xmlns="http://www.w3.org/2000/svg" height="36" width="31" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M194.4 211.7a53.3 53.3 0 1 0 59.3 88.7 53.3 53.3 0 1 0 -59.3-88.7zm142.3-68.4c-5.2-5.2-11.5-9.3-18.4-12c-18.1-7.1-57.6-6.8-83.1-6.5c-4.1 0-7.9 .1-11.2 .1c-3.3 0-7.2 0-11.4-.1c-25.5-.3-64.8-.7-82.9 6.5c-6.9 2.7-13.1 6.8-18.4 12s-9.3 11.5-12 18.4c-7.1 18.1-6.7 57.7-6.5 83.2c0 4.1 .1 7.9 .1 11.1s0 7-.1 11.1c-.2 25.5-.6 65.1 6.5 83.2c2.7 6.9 6.8 13.1 12 18.4s11.5 9.3 18.4 12c18.1 7.1 57.6 6.8 83.1 6.5c4.1 0 7.9-.1 11.2-.1c3.3 0 7.2 0 11.4 .1c25.5 .3 64.8 .7 82.9-6.5c6.9-2.7 13.1-6.8 18.4-12s9.3-11.5 12-18.4c7.2-18 6.8-57.4 6.5-83c0-4.2-.1-8.1-.1-11.4s0-7.1 .1-11.4c.3-25.5 .7-64.9-6.5-83l0 0c-2.7-6.9-6.8-13.1-12-18.4zm-67.1 44.5A82 82 0 1 1 178.4 324.2a82 82 0 1 1 91.1-136.4zm29.2-1.3c-3.1-2.1-5.6-5.1-7.1-8.6s-1.8-7.3-1.1-11.1s2.6-7.1 5.2-9.8s6.1-4.5 9.8-5.2s7.6-.4 11.1 1.1s6.5 3.9 8.6 7s3.2 6.8 3.2 10.6c0 2.5-.5 5-1.4 7.3s-2.4 4.4-4.1 6.2s-3.9 3.2-6.2 4.2s-4.8 1.5-7.3 1.5l0 0c-3.8 0-7.5-1.1-10.6-3.2zM448 96c0-35.3-28.7-64-64-64H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96zM357 389c-18.7 18.7-41.4 24.6-67 25.9c-26.4 1.5-105.6 1.5-132 0c-25.6-1.3-48.3-7.2-67-25.9s-24.6-41.4-25.8-67c-1.5-26.4-1.5-105.6 0-132c1.3-25.6 7.1-48.3 25.8-67s41.5-24.6 67-25.8c26.4-1.5 105.6-1.5 132 0c25.6 1.3 48.3 7.1 67 25.8s24.6 41.4 25.8 67c1.5 26.3 1.5 105.4 0 131.9c-1.3 25.6-7.1 48.3-25.8 67z"/></svg>
+        <svg id="linkedinIcons"  xmlns="http://www.w3.org/2000/svg" height="36" width="31" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
       </div>
       </div>
       </div>
@@ -236,5 +245,8 @@
       </div>
     </section>
 
+   
+
+    <script src="./assets/script.js"></script>
   </body>
 </html>

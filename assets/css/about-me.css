@@ -10,10 +10,15 @@
 }
 .about-me-right{
   width: 60%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .text-1{
   font-weight: bold;
+
 }
 /* Mobile CSS */
 @media (max-width: 768px){
